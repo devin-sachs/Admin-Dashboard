@@ -1,0 +1,24 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.side-bar{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 9fr;
+    justify-content: center;
+    align-items: center;
+    /* gap: 30px; */
+    grid-column: 1;
+}
+
+.side-bar :first-child,
+.side-bar:nth-child(2) {
+    max-width: 75%;
+    
+
+}
+.side-bar img{
+    max-width: 50%;
+}

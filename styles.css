@@ -16,9 +16,6 @@ HTML, body{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 9fr;
-    /* justify-items: center;
-    align-items: center; */
-
     /* grid-template-areas: 
     "a b"
     "a b"
@@ -29,9 +26,6 @@ HTML, body{
     "a b"
     "a b"
     "a b"; */
-
-
-    /* place-items: center; */
     gap: 15px;
     grid-column: 1;
     background-color:rgb(100, 145, 228);
@@ -56,10 +50,15 @@ HTML, body{
     margin-bottom: 2em;
 }
 
-.side-bar :nth-child(11),
-.side-bar :nth-child(12){
+/* .side-bar :nth-child(14),
+.side-bar :nth-child(15){
     margin-bottom: 4em;
+} */
+.side-bar :nth-last-child(5),
+.side-bar :nth-last-child(6) {
+    margin-top: 2em;
 }
+
 .side-bar :nth-last-child(1),
 .side-bar :nth-last-child(2) {
     margin-bottom: 50em;

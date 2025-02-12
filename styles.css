@@ -6,8 +6,10 @@ HTML, body{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     margin:0 0 0 0;
+    height: 100vh;
+    width: 60%;
 }
 
 .side-bar{
@@ -30,14 +32,15 @@ HTML, body{
 
 
     /* place-items: center; */
-    gap: 10px;
+    gap: 15px;
     grid-column: 1;
     background-color:rgb(100, 145, 228);
     color: white;
+    font-weight: bold;
 }
 
 .nav-image{
-    max-width: 30%;
+    max-width: 50%;
     align-self: center;
     justify-self: center;
 }
@@ -48,19 +51,19 @@ HTML, body{
 }
 
 .side-bar :first-child,
-.side-bar:nth-child(2) {
-    max-width: 75%;
-    margin-bottom: 1em;
+.side-bar :nth-child(2) {
+    max-width: 100%;
+    margin-bottom: 2em;
 }
 
-.side-bar:nth-child(14){
-    /* margin-bottom: 1em; */
+.side-bar :nth-child(11),
+.side-bar :nth-child(12){
+    margin-bottom: 4em;
 }
-
-/* .side-bar img{
-    
-    
-} */
+.side-bar :nth-last-child(1),
+.side-bar :nth-last-child(2) {
+    margin-bottom: 50em;
+}
 img{
     filter:invert(100%) brightness(100%);
 }

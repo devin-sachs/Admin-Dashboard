@@ -6,26 +6,19 @@ HTML, body{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin:0 0 0 0;
+    grid-template-columns: 1fr 4fr; /* Sidebar + Main Section */
+    grid-template-rows: auto auto; /* Ensures sections stack properly */
+    width: 100%;
     height: 100vh;
-    width: 60%;
 }
 
 .side-bar{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 9fr;
-    /* grid-template-areas: 
-    "a b"
-    "a b"
-    "a b"
-    "a b"
-    "a b"
-    "a b"
-    "a b"
-    "a b"
-    "a b"; */
+
+    grid-column: 1;
+    grid-row: 1 / span 2;
     gap: 15px;
     grid-column: 1;
     background-color:rgb(100, 145, 228);
@@ -37,6 +30,7 @@ HTML, body{
     max-width: 50%;
     align-self: center;
     justify-self: center;
+    filter:invert(100%) brightness(100%);
 }
 
 .nav-menu{
@@ -50,10 +44,6 @@ HTML, body{
     margin-bottom: 2em;
 }
 
-/* .side-bar :nth-child(14),
-.side-bar :nth-child(15){
-    margin-bottom: 4em;
-} */
 .side-bar :nth-last-child(5),
 .side-bar :nth-last-child(6) {
     margin-top: 2em;
@@ -63,6 +53,65 @@ HTML, body{
 .side-bar :nth-last-child(2) {
     margin-bottom: 50em;
 }
-img{
-    filter:invert(100%) brightness(100%);
+
+
+.top-section {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 0.25fr 8fr 2fr 1fr 3fr 2fr; 
+    grid-template-rows: 1fr 2r;
+    gap: 20px;
+    /* grid-template-areas: 
+    "search-icon search-bar . bell profile name"
+    "profile name . new-button upload-button share-button"; */
+
+
+    height: 100%;
+    background-color: red;
+}
+
+.top-section > * {
+    /* justify-self: center;
+    align-self: center; */
+}
+
+.search-icon{
+    max-width: 75%;
+    justify-self: center;
+    align-self: center;
+}
+
+.search-bar{
+    grid-column: 2 / span 2;
+    justify-self: start;
+    align-self: center;
+    width: 90%;
+    height: 60%;
+    border: solid rgb(214, 222, 231) 1px;
+    border-radius: 30px;
+    background-color: rgb(214, 222, 231);
+
+}
+
+.search-icon,
+.search-bar {
+
+}
+
+.bell{
+    max-width: 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+.profile{
+    max-width: 30%;
+    justify-self: center;
+    align-self: center;
+}
+
+.name{
+    justify-self: start;
+    align-self: center;
+    font-weight: bold;
 }

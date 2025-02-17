@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card with Footer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border-top: 1px solid #ddd;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icons i {
+            font-size: 20px;
+            color: #555;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .icons i:hover {
+            color: #007bff;
+        }
+    </style>
+    
+    <!-- Updated Font Awesome CDN (Version 6) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-content">
+            <h3>Card Title</h3>
+            <p>This is some sample content inside the card.</p>
+        </div>
+        <div class="card-footer">
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-comment"></i>
+                <i class="fa-solid fa-share"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

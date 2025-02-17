@@ -16,8 +16,9 @@ HTML, body{
 .side-bar{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 9fr;
-
+    /* grid-template-rows: auto; */
+    /* grid-template-rows: 1fr repeat(6, 7%) repeat(3,10%); */
+    grid-template-rows: 5% repeat(6, 3%) repeat(3,3%);
     grid-column: 1;
     grid-row: 1 / span 2;
     gap: 15px;
@@ -50,12 +51,12 @@ HTML, body{
 
 .side-bar :nth-last-child(5),
 .side-bar :nth-last-child(6) {
-    margin-top: 2em;
+    /* margin-top: 2em; */
 }
 
 .side-bar :nth-last-child(1),
 .side-bar :nth-last-child(2) {
-    margin-bottom: 50em;
+    align-self: start;
 }
 
 
@@ -114,7 +115,7 @@ HTML, body{
 }
 
 .big.profile{
-    max-width: 220%;
+    max-width: 4000%;
     max-height: 67%;
     height: 15vh;
     padding-left: 15px;
@@ -159,13 +160,89 @@ button{
       "projects trending";
     grid-template-columns: 3fr 1fr;
     gap: 15px;
-    background-color: blanchedalmond;
+    background-color: 	#DCDCDC;
+    padding: 25px;
 }
 
 .projects{
     grid-area: projects;
 }
 
+.header{
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 20px;
+}
+
+.card-header{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.container.card{
+    display: grid;
+    grid-template-areas: 
+    "cardOne cardTwo"
+    "cardThree cardFour"
+    "cardFive cardSix";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 30px;
+    text-wrap: wrap;
+
+}
+
+.card > *{
+    background-color: white;
+    border-left: solid goldenrod 10px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.card-icon-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.card-icon{
+  height: 2vh;
+  padding: 13px;
+}
+
+.card-content{
+    height: 80%;
+}
+
+
 .announcements{
     grid-area: announcements;
+}
+
+.ann-header{
+    padding-bottom: 20px;
+}
+
+.ann-container-cards{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    /* gap: 30px; */
+    text-wrap: wrap;
+    background-color: white;
+    /* border-left: solid goldenrod 10px; */
+    border-radius: 5px;
+    padding: 30px;
+}
+
+
+
+.ann-border{
+    border-bottom: solid #DCDCDC 3px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.ann-card-header{
+    font-weight: bold;
 }

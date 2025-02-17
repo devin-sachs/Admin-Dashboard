@@ -8,7 +8,7 @@ HTML, body{
 .container{
     display: grid;
     grid-template-columns: 0.75fr 4fr; /* Sidebar + Main Section */
-    grid-template-rows: 1fr 3fr; 
+    grid-template-rows: 200px 1fr; 
     width: 100%;
     height: 100vh;
 }
@@ -63,9 +63,9 @@ HTML, body{
     padding: 10px 20px 10px 50px;
     display: grid;
     grid-template-columns: 0.25fr 8fr 2fr 1fr 1.5fr 1.5fr; 
-    grid-template-rows: 1fr 2r;
+    grid-template-rows: 1fr 3fr;
     gap: 20px;
-    height:50%;
+    height:100%;
     /* background-color: red; */
 }
 
@@ -77,7 +77,7 @@ HTML, body{
 .search-icon{
     align-self: center;
     justify-self: center;
-    height: 4vh;
+    height: 3vh;
     /* max-width: 67%; */
 }
 
@@ -86,7 +86,7 @@ HTML, body{
     justify-self: start;
     align-self: center;
     width: 90%;
-    height: 5vh;
+    height: 3vh;
     border: solid rgb(214, 222, 231) 1px;
     border-radius: 30px;
     background-color: rgb(214, 222, 231);
@@ -114,7 +114,8 @@ HTML, body{
 }
 
 .big.profile{
-    max-width: 400%;
+    max-width: 220%;
+    max-height: 67%;
     height: 15vh;
     padding-left: 15px;
 }
@@ -151,6 +152,20 @@ button{
     justify-self: start;
 }
 
-.projects{
+.main-section{
     display: grid;
+    grid-template-areas: 
+      "projects announcements"
+      "projects trending";
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+    background-color: blanchedalmond;
+}
+
+.projects{
+    grid-area: projects;
+}
+
+.announcements{
+    grid-area: announcements;
 }

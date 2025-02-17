@@ -2,12 +2,13 @@ HTML, body{
     margin: 0px;
     padding: 0px;
     border: 0px;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 4fr; /* Sidebar + Main Section */
-    grid-template-rows: auto auto; /* Ensures sections stack properly */
+    grid-template-columns: 0.75fr 4fr; /* Sidebar + Main Section */
+    grid-template-rows: 1fr 3fr; 
     width: 100%;
     height: 100vh;
 }
@@ -24,6 +25,8 @@ HTML, body{
     background-color:rgb(100, 145, 228);
     color: white;
     font-weight: bold;
+
+    padding: 15px;
 }
 
 .nav-image{
@@ -31,6 +34,7 @@ HTML, body{
     align-self: center;
     justify-self: center;
     filter:invert(100%) brightness(100%);
+    min-width: 2vh;
 }
 
 .nav-menu{
@@ -56,29 +60,25 @@ HTML, body{
 
 
 .top-section {
-    padding: 10px;
+    padding: 10px 20px 10px 50px;
     display: grid;
-    grid-template-columns: 0.25fr 8fr 2fr 1fr 3fr 2fr; 
+    grid-template-columns: 0.25fr 8fr 2fr 1fr 1.5fr 1.5fr; 
     grid-template-rows: 1fr 2r;
     gap: 20px;
-    /* grid-template-areas: 
-    "search-icon search-bar . bell profile name"
-    "profile name . new-button upload-button share-button"; */
-
-
-    height: 100%;
-    background-color: red;
+    height:50%;
+    /* background-color: red; */
 }
 
 .top-section > * {
-    /* justify-self: center;
-    align-self: center; */
+    /* justify-self: center; */
+    align-self: center;
 }
 
 .search-icon{
-    max-width: 75%;
-    justify-self: center;
     align-self: center;
+    justify-self: center;
+    height: 4vh;
+    /* max-width: 67%; */
 }
 
 .search-bar{
@@ -86,32 +86,71 @@ HTML, body{
     justify-self: start;
     align-self: center;
     width: 90%;
-    height: 60%;
+    height: 5vh;
     border: solid rgb(214, 222, 231) 1px;
     border-radius: 30px;
     background-color: rgb(214, 222, 231);
 
 }
 
-.search-icon,
-.search-bar {
-
-}
-
 .bell{
-    max-width: 50%;
-    justify-self: center;
     align-self: center;
+    justify-self: right;
+    max-width: 30%;
+
 }
 
 .profile{
-    max-width: 30%;
-    justify-self: center;
     align-self: center;
+    justify-self: center;
+    max-width: 40%;
+
 }
 
 .name{
-    justify-self: start;
     align-self: center;
+    justify-self: start;
     font-weight: bold;
+}
+
+.big.profile{
+    max-width: 400%;
+    height: 15vh;
+    padding-left: 15px;
+}
+
+.greeting{
+    padding-left: 30px;
+    grid-column: 2 / span 2;
+}
+
+button{
+    border: solid 1px rgb(100, 145, 228);
+    background-color:rgb(100, 145, 228);
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    padding: 10px 40px;
+    height: 50%;
+}
+
+
+.new-button{
+    align-self: center;
+    justify-self: right;
+}
+
+.upload-button{
+    align-self: center;
+    justify-self: center;
+}
+
+.share-button{
+    align-self: center;
+    justify-self: start;
+}
+
+.projects{
+    display: grid;
 }
